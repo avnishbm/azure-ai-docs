@@ -65,7 +65,7 @@ codex --version # verify installation
     nano config.toml
     ```
 
-2. Copy the text below to use the [v1 Responses API](./responses.md). With the [v1 API](../api-version-lifecycle.md) you no longer need to pass api-version, but you must include /v1 in the `base_url` path. You can't pass your API key as a string directly to `env_key`. `env_key` must point to an environment variable. Update your `base_url` with your resource name:
+2. Copy the text below to use the [v1 Responses API](./responses.md). With the [v1 API](../api-version-lifecycle.md) you no longer need to pass api-version, but you must include /v1 in the `base_url` path. It's important to note that just copy-pasting the endpoint / Target URI from Azure OpenAI / Azure AI Foundry may not work, you need to ensure that you copy the Azure OpenAI Endpoint (e.g. https://your-resource.openai.azure.com) and append /openai/v1 to it to make the base_url mentioned below. You can't pass your API key as a string directly to `env_key`. `env_key` must point to an environment variable. Update your `base_url` with your resource name:
 
     ```text
     model = "gpt-5-codex"  # Replace with your actual Azure model deployment name
